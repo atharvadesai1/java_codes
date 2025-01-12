@@ -12,15 +12,15 @@ class BinarySearch{
         int lb = 0;
         int ub = arr.length - 1;
         
-        while(lb < ub){
+        while(lb <= ub){
             int mid = (int) ((lb+ub)/2);
 
             if (arr[mid] == x){
                 return mid;
             }else if(arr[mid] < x){
-                lb = mid + 1;
+                lb = mid+1;
             }else{
-                ub = mid;
+                ub = mid-1;
             }
         }
 
